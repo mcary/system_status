@@ -7,6 +7,7 @@ class SystemsController < ApplicationController
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @systems }
+      format.json  { render :json => @systems }
     end
   end
 
@@ -18,6 +19,7 @@ class SystemsController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @system }
+      format.json  { render :json => @system }
     end
   end
 
