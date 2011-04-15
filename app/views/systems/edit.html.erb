@@ -3,4 +3,5 @@
 <%= render 'form' %>
 
 <%= link_to 'Show', @system %> |
-<%= link_to 'Back', systems_path %>
+<%= link_to 'Back', systems_path %> |
+<%= link_to 'Destroy', @system, :confirm => 'Are you sure you want to delete this system?  There is no way to get it back!', :method => :delete %>

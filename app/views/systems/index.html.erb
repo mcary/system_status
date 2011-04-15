@@ -1,27 +1,38 @@
-<h1>Listing systems</h1>
+      <div class="titlerow">
+        <h1>Internal Systems</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Status</th>
-    <th>Note</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+        <h3 class="clear statusheader">Current Status</h3>
+
+        <h3 class="notesheader">Notes</h3>
+
+        <h3 class="rssheader">RSS</h3>
+      </div>
 
 <% @systems.each do |system| %>
-  <tr>
-    <td><%= system.name %></td>
-    <td><%= system.status %></td>
-    <td><%= system.note %></td>
-    <td><%= link_to 'Show', system %></td>
-    <td><%= link_to 'Edit', edit_system_path(system) %></td>
-    <td><%= link_to 'Destroy', system, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+      <div class="row">
+        <div class="selectors hidden" id="selector0">
+			<%= system.status %>
+        </div><img class="states status0" src="http://andstone/server_status/images/ok.gif" />
+
+        <div class="names">
+			<%= system.name %>
+        </div>
+
+        <div class="notes">
+			<%= system.note %>
+        </div>
+
+        <div class="rss">
+          <a href="0.rss"><img src="http://andstone/server_status/images/feed.png" /></a>
+        </div>
+
+        <div class="editnotes">
+			<%= link_to 'Edit', edit_system_path(system) %>
+        </div>
+      </div>
 <% end %>
-</table>
 
-<br />
+      <div id="controls">
+		<%= link_to 'New System', new_system_path %>
+      </div>
 
-<%= link_to 'New System', new_system_path %>

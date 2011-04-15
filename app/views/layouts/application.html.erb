@@ -1,14 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>SystemStatus</title>
+  <title>System Status</title>
+  <link rel="stylesheet" type="text/css" href="http://andstone/server_status/status.css" />
+  <script type="text/Javascript" src="http://andstone/server_status/jquery.min.js">
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
+</script>
 </head>
+
 <body>
+  <!-- Begin Wrapper -->
+
+  <div id="wrapper">
+    <!-- Begin Content -->
+
+    <div id="content">
 
 <%= yield %>
 
+    </div><!-- End Content -->
+  </div><!-- End Wrapper -->
 </body>
 </html>
